@@ -1,0 +1,35 @@
+<?php include_once("/sections/header.php") ?>
+
+  <body>
+
+    <div class="wrapper">
+	<div class="container">
+		<h1>Welcome</h1>
+<!-- action="index.php/uploader/sesion" method="POST" -->
+		<form  action="index.php/welcome/cargarPanel" method="POST">
+			<input type="text" placeholder="Username">
+			<input type="password" placeholder="Password">
+			<button type="submit" id="login-button" >Login</button>
+		</form>
+	</div>
+
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+
+  </body>
+</html>
+<!-- Si se cargan los efectos de JS no hace la acción, quizá sería cambiar la acción en la funcion JS
+<?php  //include_once ("/sections/footer.php") ?>
+ -->
