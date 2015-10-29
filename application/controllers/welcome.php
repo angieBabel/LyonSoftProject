@@ -21,14 +21,28 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('login');
 	}
-	//Función que carga el panel de administración
+	//Carga de opciones de Materiales
 	public function cargarPanel(){
 		$this->load->view('panelMateriales');
 	}
 
+
 	public function matProductos(){
 				$this->load->view('matProductos');
 			}
+			//Oocions de productos
+					public function matAltaProductos(){
+						$this->load->view('matAltaProductos');
+					}
+
+					public function matAltaProveedores(){
+						$this->load->view('matAltaProveedores');
+					}
+					public function matAltaAlmacenes(){
+						$this->load->view('matAltaAlmacenes');
+					}
+
+
 			public function matProveedores(){
 				$this->load->view('matProveedores');
 			}
