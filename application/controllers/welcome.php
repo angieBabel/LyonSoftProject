@@ -21,39 +21,46 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('login');
 	}
+	public function panelPrincipal(){
+		$this->load->view('index');
+
+	}
 	//Carga de opciones de Materiales
-	public function cargarPanel(){
+	public function panelMateriales(){
 		$this->load->view('panelMateriales');
 	}
 
+			public function matProductos(){
+						$this->load->view('matProductos');
+					}
+					//Opciones de productos
+							public function matAltaProductos(){
+								$this->load->view('matAltaProductos');
+							}
 
-	public function matProductos(){
-				$this->load->view('matProductos');
-			}
-			//Oocions de productos
-					public function matAltaProductos(){
-						$this->load->view('matAltaProductos');
+							public function matAltaProveedores(){
+								$this->load->view('matAltaProveedores');
+							}
+							public function matAltaAlmacenes(){
+								$this->load->view('matAltaAlmacenes');
+							}
+
+
+					public function matProveedores(){
+						$this->load->view('matProveedores');
+					}
+					public function matAlmacenes(){
+						$this->load->view('matAlmacenes');
+
+					}
+					public function matTallas(){
+						$this->load->view('matTallas');
+
 					}
 
-					public function matAltaProveedores(){
-						$this->load->view('matAltaProveedores');
-					}
-					public function matAltaAlmacenes(){
-						$this->load->view('matAltaAlmacenes');
-					}
-
-
-			public function matProveedores(){
-				$this->load->view('matProveedores');
-			}
-			public function matAlmacenes(){
-				$this->load->view('matAlmacenes');
-
-			}
-			public function matTallas(){
-				$this->load->view('matTallas');
-
-			}
+//panel
+			//opciones panel
+						//funciones de opcion
 
 
 
