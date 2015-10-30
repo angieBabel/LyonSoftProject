@@ -151,5 +151,9 @@ form button:hover {
   }
 }
 .textnav{
-  font-size: 20px;
+  font-size: 15px;
+}
+.textTitle{
+  font-size: 25px;
+  font-weight: bold;
 }

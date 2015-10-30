@@ -1,8 +1,8 @@
 <?php include_once("/sections/header.php") ?>
 
-  <body id="login">
+  <body>
 
-    <div class="wrapper">
+  <div class="wrapper">
 	<div class="container">
 		<h1>Welcome</h1>
 <!-- action="index.php/uploader/sesion" method="POST" -->
