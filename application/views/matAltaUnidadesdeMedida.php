@@ -20,6 +20,10 @@
                           <textarea name="descripcion" id="" rows="3  " class="form-control" placehoder="Descripción de la actividad">
                           </textarea>
                         </div>
+                        <div class="col-lg-4">
+                          <label for="medidas">Medidas</label>
+                          <input type="text" name="medidas" type="text" class="form-control">
+                        </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-2">

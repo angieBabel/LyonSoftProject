@@ -142,10 +142,10 @@
                 <a href="index.php/welcome/matAlmacenes"><i class="fa fa-fw fa-table"></i> Almacenes</a>
             </li>
             <li>
-                <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Corridas/Tallas</a>
+                <a href="index.php/welcome/matTallas"><i class="fa fa-fw fa-edit"></i> Corridas/Tallas</a>
             </li>
             <li>
-                <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Unicades de Medida</a>
+                <a href="index.php/welcome/matUnidadesdeMedida"><i class="fa fa-fw fa-desktop"></i> Unidades de Medida</a>
             </li>
             <li>
                 <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Compras al Almacén</a>
@@ -169,7 +169,7 @@
                 <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> Entrada Inventario</a>
             </li>
             <li>
-                <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> Reporte Movimiento )</a>
+                <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> Reporte Movimiento (No Compras)</a>
             </li>
         </ul>
     </div>
