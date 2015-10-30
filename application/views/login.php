@@ -1,6 +1,6 @@
 <?php include_once("/sections/header.php") ?>
 
-  <body>
+  <body id="login">
 
     <div class="wrapper">
 	<div class="container">
@@ -13,7 +13,7 @@
 		</form>
 	</div>
 
-	<ul class="bg-bubbles">
+<!-- 	<ul class="bg-bubbles">
 		<li></li>
 		<li></li>
 		<li></li>
@@ -24,7 +24,7 @@
 		<li></li>
 		<li></li>
 		<li></li>
-	</ul>
+	</ul> -->
 </div>
 
 
