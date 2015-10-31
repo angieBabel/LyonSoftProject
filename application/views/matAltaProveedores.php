@@ -130,22 +130,22 @@
                         </div>
 
                         <div class="form-group">
-                          <label class="control-label col-lg-3" for="paginaweb">Pág. Web</label>
-                          <div class="col-lg-9">
+                          <label class="control-label col-lg-2" for="paginaweb">Pág. Web</label>
+                          <div class="col-lg-10">
                             <input type="text" class="form-control" name="paginaweb">
                           </div>
                         </div>
 
                         <div class="form-group">
-                          <label class="control-label col-lg-3" for="agenteventas">Agente Ventas</label>
-                          <div class="col-lg-9">
+                          <label class="control-label col-lg-2" for="agenteventas">Agente Ventas</label>
+                          <div class="col-lg-10">
                             <input type="text" class="form-control" name="agenteventas">
                           </div>
                         </div>
 
                         <div class="form-group">
-                          <label class="control-label col-lg-3" for="creditocobranza">Credito y Cobranza</label>
-                          <div class="col-lg-9">
+                          <label class="control-label col-lg-2" for="creditocobranza">Credito y Cobranza</label>
+                          <div class="col-lg-10">
                             <input type="text" class="form-control" name="creditocobranza">
                           </div>
                         </div>
