@@ -4,15 +4,17 @@
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#opcionesMateriales"> <!-- Menu desplegable para opciones de materiaales -->
             <span class="sr-only">Toggle navigation</span>
+            <span class="">Menu Materiales</span>
+<!--             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> -->
         </button>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#opcionesMenu"> <!-- Menu desplegable para opciones de menu -->
             <span class="sr-only">Toggle navigation</span>
+            <span class="">Menu principal</span>
+<!-- <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> -->
         </button>
         <a class="navbar-brand textTitle" href="index.php/welcome/panelPrincipal"><i class="fa fa-home"></i></a>
         <a class="navbar-brand textTitle" href="index.php/welcome/panelMateriales">Materials</a>

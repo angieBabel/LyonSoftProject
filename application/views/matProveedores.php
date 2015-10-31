@@ -29,7 +29,8 @@
                 <br>
                 <br>
                 <div class="row">
-                  <div class="table-responsive">
+                  <div class="col-lg-1"></div>
+                  <div class="table-responsive col-lg-10">
                     <table class="table table-hover table-striped">
                         <thead>
                             <tr><!--Renglones-->
@@ -37,6 +38,8 @@
                                 <th >Name</th>
                                 <th >Comercial Name</th>
                                 <th >Date</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,37 +52,46 @@
                          </tr>
                          <?php// } ?> -->
                          <tr>
-                           <td>DATOS</td>
-                           <td>DATOS</td>
-                           <td>DATOS</td>
-                           <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td><i class="fa fa-pencil-square-o"></i></td>
+                            <td><i class="fa fa-trash-o"></i></td>
                          </tr>
                          <tr>
-                           <td>DATOS</td>
-                           <td>DATOS</td>
-                           <td>DATOS</td>
-                           <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td><i class="fa fa-pencil-square-o"></i></td>
+                            <td><i class="fa fa-trash-o"></i></td>
                          </tr>
                          <tr>
-                           <td>DATOS</td>
-                           <td>DATOS</td>
-                           <td>DATOS</td>
-                           <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td>DATOS</td>
+                            <td><i class="fa fa-pencil-square-o"></i></td>
+                            <td><i class="fa fa-trash-o"></i></td>
                          </tr>
                         </tbody>
                     </table>
                   </div>
+                  <div class="col-lg-1"></div>
                 </div>
                 <div class="row">
-                  <div class=" collapse navbar-collapse">
-                     <ul class="nav navbar-nav ">
-                        <li id="lista1"><a href="#"><i class="fa fa-file-excel-o"></i> Excel </a></li>
-                        <li id="lista2"><a href="#"><i class="fa fa-print"></i> Print </a></li>
-                        <li id="lista3"><a href="index.php/welcome/matAltaProveedores"><i class="fa fa-plus"></i> New </a></li>
-                        <li id="lista4"><a href="#"><i class="fa fa-pencil"></i> Edit </a></li>
-                        <li id="lista5"><a href="#"><i class="fa fa-times"></i> Deactivate </a></li>
-                     </ul>
+                  <div class="col-lg-1"></div>
+                  <div class="col-lg-10" >
+                    <ul class="nav navbar-nav ">
+                      <li id="lista1"><a href="#"><i class="fa fa-file-excel-o fa-lg"></i> </a></li>
+                      <li id="lista2"><a href="#"><i class="fa fa-print fa-lg"></i> </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right ">
+                      <li id="lista3"><a href="index.php/welcome/matAltaProveedores">Agregar proveedor <i class="fa fa-plus-square fa-lg"></i></a></li>
+                    </ul>
                   </div>
+                  <div class="col-lg-1"></div>
                 </div>
               </div>
         </div>
