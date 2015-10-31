@@ -7,8 +7,8 @@
 		<h1>Welcome</h1>
 <!-- action="index.php/uploader/sesion" method="POST" -->
 		<form  action="index.php/welcome/panelPrincipal" method="POST">
-			<input type="text" placeholder="Username">
-			<input type="password" placeholder="Password">
+			<input type="text" placeholder="Username" id="login">
+			<input type="password" placeholder="Password" id="login">
 			<button type="submit" id="login-button" >Login</button>
 		</form>
 	</div>
