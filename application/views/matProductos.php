@@ -98,8 +98,17 @@
                   <div class="col-lg-1"></div>
                 </div>
                 <div class="row">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle btn btn-default btnInferior" data-toggle="collapse" data-target="#menuInferior"> <!-- Menu desplegable para inferiores -->
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class=""><strong>Acciones</strong></span>
+                      <!--<span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span> -->
+                    </button>
+                  </div>
                   <div class="col-lg-1"></div>
-                  <div class="col-lg-10">
+                  <div class="col-lg-10 collapse navbar-collapse navbar-ex1-collapse" id="menuInferior">
                      <ul class="nav navbar-nav ">
                         <li id="lista1"><a href="#"><i class="fa fa-tags fa-lg"></i>  </a></li>
                         <li id="lista1"><a href="#"><i class="fa fa-list-alt fa-lg"></i></a></li>
