@@ -93,7 +93,7 @@
                   <div class="form-group ">
                     <div class="col-lg-10"></div>
                       <div class="col-lg-2">
-                        <button type="submit" class="btn btn-primary form-control">Save</button>
+                        <button type="submit" class="btn btn-success form-control">Save</button>
                       </div>
                   </div>
                 </form>
