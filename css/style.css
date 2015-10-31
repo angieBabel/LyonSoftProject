@@ -167,6 +167,7 @@ form button:hover {
   font-size: 50vh;
 
 }
-.form{
-  border: black 20px;
+.pform{
+  /*background: #152A38;*/
+  border:1px solid #423932 ;
 }

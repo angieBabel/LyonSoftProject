@@ -14,50 +14,55 @@
                   <h1 id="IdTitulo">Added Products</h1>
               </div>
             </div>
-            <div class="row" class="form">
+            <div class="row ">
               <div class="col-lg-2"></div>
-              <div class="col-lg-8">
-                <form class="form-group" action="" method="POST">
-                  <div class="row">
-                    <div class="col-lg-10"></div>
-                    <div class="col-lg-2">
-                            <label for="clave">Clave</label>
-                            <input type="text" name="clave" type="text" class="form-control">
+              <div class="col-lg-8 pform">
+                <form class="form-horizontal" action="" method="POST">
+                  <div class="form-group">
+                    <label for="clave" class="control-label col-lg-9">Clave</label>
+                    <div class="col-lg-3">
+                      <input type="text" name="clave" type="text" class="form-control">
                     </div>
                   </div>
 
-                  <div class="row">
-                          <div class="col-lg-4">
-                            <label for="descripcion">Descrpipcion</label>
-                            <textarea name="descripcion" id="" rows="3  " class="form-control" placehoder="Descripción de la actividad">
-                            </textarea>
-                          </div>
-                            <div class="col-lg-2">
-                              <label class="sr-only" for="ucosto">Amount</label>
-                              <div class="input-group">
-                                <div class="input-group-addon">$</div>
-                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount" name="ucosto">
-                              </div>
-                            </div>
-                            <div class="col-lg-4">
-                              <label for="umedidas">Unicad de Medida</label>
-                              <select name="umedidas" id="" class="form-control">
+                  <div class="form-group">
+                    <label for="clave" class="control-label col-lg-2">Descrpipcion</label>
+                    <div class="col-lg-10">
+                      <textarea name="descripcion" id="" rows="3  " class="form-control" placehoder="Descripción de la actividad">
+                      </textarea>
+
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="ucosto">Costo</label>
+                    <div class="col-lg-2">
+                      <input type="text" class="form-control" placeholder="Amount" name="ucosto">
+                    </div>
+                    <label for="umedidas" class="control-label col-lg-2">U. de Medida</label>
+                    <div class="col-lg-2">
+                      <select name="umedidas" id="" class="form-control">
                                 <option value="1">Opciones</option>
                                 <option value="2">Opciones</option>
                                 <option value="3">Opciones</option>
                                 <option value="4">Opciones</option>
-                              </select>
-                            </div>
-                            <div class="col-lg-4">
-                              <label for="tallas">Tallas</label>
-                               <select name="tallas" id="" class="form-control">
-                                  <option value="1">Opciones</option>
-                                  <option value="2">Opciones</option>
-                                  <option value="3">Opciones</option>
-                                  <option value="4">Opciones</option>
-                                </select>
-                            </div>
+                      </select>
+                    </div>
+                    <label for="tallas" class="control-label col-lg-2">Tallas</label>
+                    <div class="col-lg-2">
+                        <select name="tallas" id="" class="form-control">
+                          <option value="1">Opciones</option>
+                          <option value="2">Opciones</option>
+                          <option value="3">Opciones</option>
+                          <option value="4">Opciones</option>
+                        </select>
+                    </div>
                   </div>
+
+                  <div class="form-group ">
+                    <p>Stock</p>
+                  </div>
+
+
                   <div class="row">
                           <div class="col-lg-2">
                             <label for="minimo">Minimo</label>
