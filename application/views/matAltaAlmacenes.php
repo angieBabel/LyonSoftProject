@@ -9,25 +9,38 @@
         <div id="page-wrapper">
 
               <div class="container-fluid">
-                  <form class="form-group" action="" method="POST">
-                      <div class="row">
-                        <div class="col-lg-2">
-                          <label for="clave">Clave</label>
-                          <input type="text" name="clave" type="text" class="form-control">
-                        </div>
-                        <div class="col-lg-4">
-                          <label for="descripcion">Descrpipcion</label>
-                          <textarea name="descripcion" id="" rows="3  " class="form-control" placehoder="Descripción de la actividad">
-                          </textarea>
-                        </div>
+               <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="IdTitulo">Alta de Almacen</h1>
+                    </div>
+
+                </div>
+                <form class="form-group" action="" method="POST">
+                    <div class="row">
+                    <div class="col-lg-2"></div>
+                      <div class="col-lg-2">
+                        <label for="clave">Clave</label>
+                        <input type="text" name="clave" type="text" class="form-control">
                       </div>
-                      <div class="row">
-                        <div class="col-lg-2">
-                          <input type="submit" class="btn btn-succes" value="Guardar">
-                          <input type="button" class="btn btn-succes" value="Cancelar">
-                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-2"></div>
+                      <div class="col-lg-6">
+                        <label for="descripcion">Descrpipcion</label>
+                        <textarea name="descripcion" id="" rows="3  " class="form-control" placehoder="Descripción de la actividad">
+                        </textarea>
                       </div>
-                  </form>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6"></div>
+                      <div class="col-lg-1">
+                        <input type="submit" class="btn btn-succes" value="Guardar">
+                      </div>
+                      <div class="col-lg-1">
+                        <input type="button" class="btn btn-succes" value="Cancelar">
+                      </div>
+                    </div>
+                </form>
               </div>
         <!-- /#page-wrapper -->
 
