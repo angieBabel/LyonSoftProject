@@ -169,5 +169,6 @@ form button:hover {
 }
 .pform{
   /*background: #152A38;*/
-  border:1px solid #423932 ;
+  border:1px solid rgba(21,42,56,.3) ;
+  border-radius: 3%;
 }

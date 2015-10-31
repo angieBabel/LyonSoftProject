@@ -21,7 +21,7 @@
                   <div class="form-group">
                     <label for="clave" class="control-label col-lg-9">Clave</label>
                     <div class="col-lg-3">
-                      <input type="text" name="clave" type="text" class="form-control">
+                      <input type="text" name="clave" type="text" class="form-control" disabled>
                     </div>
                   </div>
 
@@ -57,40 +57,44 @@
                         </select>
                     </div>
                   </div>
+                  <br>
 
                   <div class="form-group ">
-                    <p>Stock</p>
+                    <label class="col-lg-12" for="">Stock</label>
+                    <br>
+                    <label class="control-label col-lg-2" for="minimo">Minimo</label>
+                    <div class="col-lg-2">
+                      <input type="text" class="form-control" name="minimo">
+                    </div>
+                    <label for="maximo" class="control-label col-lg-2">Máximo</label>
+                    <div class="col-lg-2">
+                      <input type="text" class="form-control" name="maximo">
+                    </div>
+                    <label for="tentrega" class="control-label col-lg-2">Tiempo de Entrega</label>
+                    <div class="col-lg-2">
+                      <input type="number" class="form-control" name="tentrega">
+                    </div>
+                  </div>
+
+                  <div class="form-group ">
+                    <label class="col-lg-12" for="">Código de Barras</label>
+                    <br>
+                    <label class="control-label col-lg-1" for="sku1">Sku(1)</label>
+                    <div class="col-lg-5">
+                      <input type="text" class="form-control" name="sku1">
+                    </div>
+                    <label for="sku2" class="control-label col-lg-1">Sku(2)</label>
+                    <div class="col-lg-5">
+                      <input type="text" class="form-control" name="sku2">
+                    </div>
                   </div>
 
 
-                  <div class="row">
-                          <div class="col-lg-2">
-                            <label for="minimo">Minimo</label>
-                            <input type="text" class="form-control" name="minimo">
-                          </div>
-                          <div class="col-lg-2">
-                            <label for="maximo">Máximo</label>
-                            <input type="text" class="form-control" name="maximo">
-                          </div>
-                          <div class="col-lg-2">
-                            <label for="tentrega">Tiempo de Entrega</label>
-                            <input type="number" class="form-control" name="tentrega">
-                          </div>
-                  </div>
-                  <div class="row">
-                          <div class="col-lg-2">
-                            <label for="sku1">Sku (1)</label>
-                            <input type="text" class="form-control" name="sku1">
-                          </div>
-                          <div class="col-lg-2">
-                            <label for="sku2">Sku (2)</label>
-                            <input type="text" class="form-control" name="sku2">
-                          </div>
-                  </div>
-                  <div class="row">
-                          <div class="col-lg-2">
-                            <input type="submit" class="fa fa-save" value="Guardar">
-                          </div>
+                  <div class="form-group ">
+                    <div class="col-lg-10"></div>
+                      <div class="col-lg-2">
+                        <button type="submit" class="btn btn-primary form-control">Save</button>
+                      </div>
                   </div>
                 </form>
               </div>
