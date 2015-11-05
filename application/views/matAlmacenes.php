@@ -33,42 +33,23 @@
                     <table class="table table-hover table-striped">
                         <thead>
                             <tr><!--Renglones-->
-                                <th >ID</th><!--Colunas-->
-                                <th >Description</th>
-                                <th >Date</th>
+                                <th>ID</th><!--Colunas-->
+                                <th>Description</th>
+                                <th>Fecha</th>
                                 <th></th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                         <tr>
-                            <td>Datos</td>
-                            <td>Datos</td>
-                            <td>Datos</td>
-                            <td><i class="fa fa-pencil-square-o"></i></td>
-                            <td><i class="fa fa-trash-o"></i></td>
-                         </tr>
-                         <tr>
-                            <td>Datos</td>
-                            <td>Datos</td>
-                            <td>Datos</td>
-                            <td><i class="fa fa-pencil-square-o"></i></td>
-                            <td><i class="fa fa-trash-o"></i></td>
-                         </tr>
-                         <tr>
-                            <td>Datos</td>
-                            <td>Datos</td>
-                            <td>Datos</td>
-                            <td><i class="fa fa-pencil-square-o"></i></td>
-                            <td><i class="fa fa-trash-o"></i></td>
-                         </tr>
-                         <tr>
-                            <td>Datos</td>
-                            <td>Datos</td>
-                            <td>Datos</td>
-                            <td><i class="fa fa-pencil-square-o"></i></td>
-                            <td><i class="fa fa-trash-o"></i></td>
-                         </tr>
+                          <?php foreach($almacen as $rowAlmacen){ ?>
+                           <tr>
+                               <td><?php echo $rowAlmacen['idalmacen']; ?></td>
+                               <td><?php echo $rowAlmacen['descripcion']; ?></td>
+                               <td><?php echo $rowAlmacen['fecha']; ?></td>
+                               <td><i class="fa fa-pencil-square-o"></i></td>
+                               <td><i class="fa fa-trash-o"></i></td>
+                           </tr>
+                           <?php } ?>
                         </tbody>
                     </table>
                   </div>

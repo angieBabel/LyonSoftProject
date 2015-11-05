@@ -35,63 +35,33 @@
                     <table class="table table-hover table-striped">
                         <thead>
                             <tr><!--Renglones-->
-                              <th >ID</th>
-                                <th >Description</th><!--Colunas-->
-                                <th >Measurement Units</th>
-                                <th >Cost</th>
-                                <th >Max</th>
-                                <th >Min</th>
-                                <th >Sizes</th>
-                                <th></th>
-                                <th></th>
+                              <th>ID</th>
+                              <th>Description</th><!--Colunas-->
+                              <th>IdMedida</th>
+                              <th>Cost</th>
+                              <th>Max</th>
+                              <th>Min</th>
+                              <th>Sizes</th>
+                              <th>Tiempo Entrega</th>
+                              <th></th>
+                              <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                         <!-- <?php //foreach($productos as $rowProductos){ ?>
-                         <tr>
-                             <td><?php// echo $rowProductos['description']; ?></td>
-                             <td><?php //echo $rowProductos['id']; ?></td>
-                             <td><?php //echo $rowProductos['measurementunits']; ?></td>
-                             <td><?php //echo $rowProductos['cost']; ?></td>
-                             <td><?php //echo $rowProductos['max']; ?></td>
-                             <td><?php //echo $rowProductos['min']; ?></td>
-                             <td><?php //echo $rowProductos['sizes']; ?></td>
-                         </tr>
-                         <?php //} ?> -->
-
-                         <tr>
-                            <td>1</td>
-                            <td>Oil #0</td>
-                            <td>Liters</td>
-                            <td>31.2500</td>
-                            <td>10000</td>
-                            <td>10000</td>
-                            <td>Unisize</td>
-                            <td><i class="fa fa-pencil-square-o"></i></td>
-                            <td><i class="fa fa-trash-o"></i></td>
-                         </tr>
-                         <tr>
-                            <td>2</td>
-                            <td>Acetona</td>
-                            <td>Can</td>
-                            <td>21.4700</td>
-                            <td>1000000</td>
-                            <td>1000000</td>
-                            <td>Unisize</td>
-                            <td><i class="fa fa-pencil-square-o"></i></td>
-                            <td><i class="fa fa-trash-o"></i></td>
-                         </tr>
-                         <tr>
-                            <td>3</td>
-                            <td>Acondicionador R-22</td>
-                            <td>Can</td>
-                            <td>89.000</td>
-                            <td>10000</td>
-                            <td>10000</td>
-                            <td>Unisize</td>
-                            <td><i class="fa fa-pencil-square-o"></i></td>
-                            <td><i class="fa fa-trash-o"></i></td>
-                         </tr>
+                          <?php foreach($productos as $rowProductos){ ?>
+                          <tr>
+                              <td><?php echo $rowProductos['clave']; ?></td>
+                              <td><?php echo $rowProductos['descripcion']; ?></td>
+                              <td><?php echo $rowProductos['idmedida']; ?></td>
+                              <td><?php echo $rowProductos['costo']; ?></td>
+                              <td><?php echo $rowProductos['maximo']; ?></td>
+                              <td><?php echo $rowProductos['minimo']; ?></td>
+                              <td><?php echo $rowProductos['corrida']; ?></td>
+                              <td><?php echo $rowProductos['tentrega']; ?></td>
+                              <td><i class="fa fa-pencil-square-o"></i></td>
+                              <td><i class="fa fa-trash-o"></i></td>
+                          </tr>
+                          <?php } ?>
                         </tbody>
                     </table>
                   </div>
