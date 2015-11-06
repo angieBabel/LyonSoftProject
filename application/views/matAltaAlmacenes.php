@@ -20,7 +20,7 @@
                   <div class="col-lg-8 pform">
 
                     <form class="form-horizontal" action="index.php/uploader/altaAlmacen" method="POST" enctype="multipart/form-data">
-                    <?php form_open_multipart('uploader/altaAlmacen'); ?>
+                      <?php form_open_multipart('uploader/altaAlmacen'); ?>
                         <div class="form-group">
                           <label for="clave" class="control-label col-lg-2">Clave</label>
                           <div class="col-lg-4">

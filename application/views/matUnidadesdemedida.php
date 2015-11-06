@@ -77,7 +77,7 @@
                         <li id="lista2"><a href="#"><i class="fa fa-print fa-lg"></i> </a></li>
                       </ul>
                       <ul class="nav navbar-nav navbar-right ">
-                          <li id="lista3"><a href="index.php/welcome/matAltaProductos">Agregar Unidad de medida  <i class="fa fa-plus-square fa-lg"></i></a></li>
+                          <li id="lista3"><a href="index.php/welcome/matAltaUnidadesdeMedida">Agregar Unidad de medida  <i class="fa fa-plus-square fa-lg"></i></a></li>
                       </ul>
                     </div>
                     <div class="col-lg-1"></div>
