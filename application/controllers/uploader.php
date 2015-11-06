@@ -35,7 +35,7 @@ function __construct(){
         $this->session->sess_destroy();
         $this->load->view('login');
 }*/
-//Alta de actividades de talleres, eventos o en ecotecnias
+//Altas
   public function altaProducto(){
 
       $clave=$this->input->POST('clave');
@@ -54,6 +54,8 @@ function __construct(){
       $ucosto,$umedidas,$fecha,$tallas,$minimo,$maximo,$tentrega,$sku1,$sku2);
      redirect('welcome/matProductos');
     }
+
+
 
    public function altaProveedor(){
 
@@ -75,6 +77,13 @@ function __construct(){
   public function altaUmedida(){
 
   }
+//Desactivar
+  function desactivaProducto($id)
+  {
+    $this->m_Lyons->desactivaProducto($id);
+    redirect('welcome/matProductos');
+  }
+
 
 
 }

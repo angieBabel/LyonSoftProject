@@ -47,7 +47,7 @@
                          <tbody>
                            <?php foreach($unimedida as $rowUnimedidas){ ?>
                            <tr>
-                               <td><?php echo $rowUnimedidas['idmedida']; ?></td>
+                               <td><?php echo $rowUnimedidas['clave']; ?></td>
                                <td><?php echo $rowUnimedidas['descripcion']; ?></td>
                                <td><?php echo $rowUnimedidas['factor_tbmedida']; ?></td>
                                <td><?php echo $rowUnimedidas['unidadbase_id']; ?></td>
