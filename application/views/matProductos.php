@@ -56,7 +56,7 @@
                               <td><?php echo $rowProductos['costo']; ?></td>
                               <td><?php echo $rowProductos['maximo']; ?></td>
                               <td><?php echo $rowProductos['minimo']; ?></td>
-                              <td><?php echo $rowProductos['corrida']; ?></td>
+                              <td><?php echo $rowProductos['clavecor']; ?></td>
                               <td><?php echo $rowProductos['tentrega']; ?></td>
                               <td><i class="fa fa-pencil-square-o"></i></td>
                               <td><i class="fa fa-trash-o"></i></td>

@@ -13,7 +13,7 @@
                 <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 id="IdTitulo">Products</h1>
+                        <h1 id="IdTitulo">Unidades de medida</h1>
                     </div>
 
                 </div>
@@ -47,8 +47,8 @@
                          <tbody>
                            <?php foreach($unimedida as $rowUnimedidas){ ?>
                            <tr>
-                               <td><?php echo $rowUnimedidas['IDMEDIDA']; ?></td>
-                               <td><?php echo $rowUnimedidas['DESCRIPCION']; ?></td>
+                               <td><?php echo $rowUnimedidas['idmedida']; ?></td>
+                               <td><?php echo $rowUnimedidas['descripcion']; ?></td>
                                <td><?php echo $rowUnimedidas['factor_tbmedida']; ?></td>
                                <td><?php echo $rowUnimedidas['unidadbase_id']; ?></td>
                                <td><i class="fa fa-pencil-square-o"></i></td>

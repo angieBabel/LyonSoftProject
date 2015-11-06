@@ -25,6 +25,14 @@ class M_Lyons extends CI_Model{
   }*/
 
 //obtención de datos de la base de datos
+  public function getUProducto()
+   {
+    $this->db->order_by('clave','desc');
+    $this->db->limit(1);
+    $query=$this->db->get('articulos');
+    return $query->result_array();
+   }
+
   public function get_productos(){
      return $this->db->from('articulos')
                 ->where('estatus',1)
@@ -32,15 +40,29 @@ class M_Lyons extends CI_Model{
                 ->result_array();
   }
   /*
+  public function getUProveedor()
+   {
+    $this->db->order_by('clave','desc');
+    $this->db->limit(1);
+    $query=$this->db->get('articulos');
+    return $query->result_array();
+   }
     public function get_proveedores(){
       return $this->db->from('proveedores')
                   ->get()
                   ->result_array();
     }*/
+  public function getUAlmacen()
+   {
+    $this->db->order_by('clave','desc');
+    $this->db->limit(1);
+    $query=$this->db->get('tbalmacen');
+    return $query->result_array();
+   }
 
   public function get_almacen(){
     return $this->db->from('tbalmacen')
-                ->where('activo',1)
+                ->where('estatus',1)
                 ->get()
                 ->result_array();
   }
@@ -60,16 +82,35 @@ class M_Lyons extends CI_Model{
   }
 
 //Altas
-  public function altaProducto(){
-
+  public function altaProducto($clave,$descripcion,$ucosto,$umedidas,$fecha,
+    $tallas,$minimo,$maximo,$tentrega,$sku1,$sku2){
+    $this->db->set('clave',$clave)
+            ->set('descripcion',$descripcion)
+            ->set('costo',$ucosto)
+            ->set('idmedida',$umedidas)
+            ->set('clavecor',$tallas)
+            ->set('fecha',$fecha)
+            ->set('unicode',prueba)//unicode pendiente
+            ->set('minimo',$minimo)
+            ->set('maximo',$maximo)
+            ->set('sku1',$sku1)
+            ->set('sku2',$sku2)
+            ->set('usuario',prueba)//pendiente
+            ->set('tentrega',$tentrega)
+            ->set('estatus',1)
+            ->insert('articulos');
   }
 
   public function altaProveedor(){
 
   }
 
-  public function altaAlmacen(){
-
+  public function altaAlmacen($clave,$descripcion,$fecha){
+    $this->db->set('clave',$clave)
+            ->set('descripcion',$descripcion)
+            ->set('fecha',$fecha)
+            ->set('estatus',1)
+            ->insert('tbalmacen');
   }
 
   public function altaTalla(){

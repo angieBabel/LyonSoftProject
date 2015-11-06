@@ -43,7 +43,7 @@
                         <tbody>
                           <?php foreach($almacen as $rowAlmacen){ ?>
                            <tr>
-                               <td><?php echo $rowAlmacen['idalmacen']; ?></td>
+                               <td><?php echo $rowAlmacen['clave']; ?></td>
                                <td><?php echo $rowAlmacen['descripcion']; ?></td>
                                <td><?php echo $rowAlmacen['fecha']; ?></td>
                                <td><i class="fa fa-pencil-square-o"></i></td>
