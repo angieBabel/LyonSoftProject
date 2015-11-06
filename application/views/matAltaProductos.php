@@ -17,11 +17,14 @@
             <div class="row ">
               <div class="col-lg-2"></div>
               <div class="col-lg-8 pform">
-                <form class="form-horizontal" action="" method="POST">
+                <form class="form-horizontal" action="index.php/uploader/altaProducto" method="POST" enctype="multipart/form-data">
+                <?php form_open_multipart('uploader/altaProducto'); ?>
                   <div class="form-group">
                     <label for="clave" class="control-label col-lg-9">Clave</label>
                     <div class="col-lg-3">
-                      <input type="text" name="clave" type="text" class="form-control" disabled>
+                      <?php foreach ($ultimoProducto as $ultimo) { ?>
+                        <input type="text" name="clave" type="text" placeholder="<?php echo $ultimo['clave']+1 ?>" class="form-control" disabled>
+                     <?php } ?>
                     </div>
                   </div>
 
@@ -41,19 +44,21 @@
                     <label for="umedidas" class="control-label col-lg-2">U. de Medida</label>
                     <div class="col-lg-2">
                       <select name="umedidas" id="" class="form-control">
-                                <option value="1">Opciones</option>
-                                <option value="2">Opciones</option>
-                                <option value="3">Opciones</option>
-                                <option value="4">Opciones</option>
+                        <?php foreach ($unimedidas as $unimedida ) { ?>
+                        <option value="<?php echo $unimedida['clave'] ?>">
+                          <?php echo $unimedida['descripcion']; ?>
+                        </option>
+                       <?php } ?>
                       </select>
                     </div>
                     <label for="tallas" class="control-label col-lg-2">Tallas</label>
                     <div class="col-lg-2">
                         <select name="tallas" id="" class="form-control">
-                          <option value="1">Opciones</option>
-                          <option value="2">Opciones</option>
-                          <option value="3">Opciones</option>
-                          <option value="4">Opciones</option>
+                          <?php foreach ($tallas as $talla ) { ?>
+                          <option value="<?php echo $talla['clave']; ?>">
+                            <?php echo $talla['corrida']; ?>
+                          </option>
+                         <?php } ?>
                         </select>
                     </div>
                   </div>

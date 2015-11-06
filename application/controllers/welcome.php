@@ -29,7 +29,12 @@ class Welcome extends CI_Controller {
 					}
 					//Opciones de productos
 							public function matAltaProductos(){
-								$this->load->view('matAltaProductos');
+								$data= array(
+										'ultimoProducto'=>$this->m_Lyons->getUProducto(),
+										'unimedidas'=>$this->m_Lyons->get_umedidas(),
+										'tallas'=>$this->m_Lyons->get_tallas(),
+									);
+								$this->load->view('matAltaProductos',$data);
 							}
 
 
@@ -50,7 +55,10 @@ class Welcome extends CI_Controller {
 			}
 			//opciones almacenes
 						public function matAltaAlmacenes(){
-							$this->load->view('matAltaAlmacenes');
+							$data = array(
+							'ultimoAlmacen'=>$this->m_Lyons->getUAlmacen(),
+							);
+							$this->load->view('matAltaAlmacenes',$data);
 						}
 
 			public function matTallas(){
