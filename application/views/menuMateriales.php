@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top background" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#opcionesMateriales"> <!-- Menu desplegable para opciones de materiaales -->
@@ -55,7 +55,7 @@
 
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse" id="opcionesMateriales">
-        <ul class="nav navbar-nav side-nav textnav">
+        <ul class="nav navbar-nav side-nav textnav backgroundL">
             <li>
                 <a href="index.php/welcome/matProductos"> Productos</a>
             </li>

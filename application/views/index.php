@@ -5,7 +5,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top textnav" role="navigation">
+        <nav class="navbar  navbar-fixed-top textnav background" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -119,8 +119,8 @@
                 </li>
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav textnav">
+            <div class="collapse navbar-collapse navbar-ex1-collapse ">
+                <ul class="nav navbar-nav side-nav textnav backgroundL">
                     <li>
                         <a href="index.html"><i class="fa fa-archive"></i> Archivo</a>
                     </li>
