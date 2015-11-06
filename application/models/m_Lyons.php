@@ -67,12 +67,27 @@ class M_Lyons extends CI_Model{
                 ->result_array();
   }
 
+  public function getUTalla()
+   {
+    $this->db->order_by('clave','desc');
+    $this->db->limit(1);
+    $query=$this->db->get('tallas');
+    return $query->result_array();
+   }
+
   public function get_tallas(){
     return $this->db->from('tallas')
                 ->where('estatus',1)
                 ->get()
                 ->result_array();
   }
+  public function getUumedidas()
+   {
+    $this->db->order_by('clave','desc');
+    $this->db->limit(1);
+    $query=$this->db->get('tbmedidas');
+    return $query->result_array();
+   }
 
   public function get_umedidas(){
     return $this->db->from('tbmedidas')
@@ -113,12 +128,38 @@ class M_Lyons extends CI_Model{
             ->insert('tbalmacen');
   }
 
-  public function altaTalla(){
+  public function altaTalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
+      $t7,$t8,$t9,$t10,$t11,$t12,$t13,$t14,$t15,$descripcion){
+    $this->db->set('clave',$clave)
+            ->set('corrida',$corrida)
+            ->set('letra',$letra)
+            ->set('cor1',$t1)
+            ->set('cor2',$t2)
+            ->set('cor3',$t3)
+            ->set('cor4',$t4)
+            ->set('cor5',$t5)
+            ->set('cor6',$t6)
+            ->set('cor7',$t7)
+            ->set('cor8',$t8)
+            ->set('cor9',$t9)
+            ->set('cor10',$t10)
+            ->set('cor11',$t11)
+            ->set('cor12',$t12)
+            ->set('cor13',$t13)
+            ->set('cor14',$t14)
+            ->set('cor15',$t15)
+            ->set('descripcion',$descripcion)
+            ->set('estatus',1)
+            ->insert('tallas');
 
   }
 
-  public function altaUmedida(){
-
+  public function altaUmedida($clave,$descripcion,$factor){
+    $this->db->set('clave',$clave)
+            ->set('descripcion',$descripcion)
+            ->set('factor_tbmedida',$factor)
+            ->set('estatus',1)
+            ->insert('tbmedidas');
   }
 
 

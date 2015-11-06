@@ -62,11 +62,17 @@ class Welcome extends CI_Controller {
 						}
 
 			public function matTallas(){
-				$this->load->view('matTallas');
+				$data = array(
+					'tallas'=>$this->m_Lyons->get_tallas()
+					);
+				$this->load->view('matTallas',$data);
 			}
 			//opciones tallas
 						public function matAltaTallas(){
-							$this->load->view('matAltaTallas');
+							$data=array (
+								'ultimaTalla'=>$this->m_Lyons->getUTalla(),
+							);
+							$this->load->view('matAltaTallas',$data);
 						}
 
 			public function matUnidadesdeMedida(){
@@ -77,7 +83,10 @@ class Welcome extends CI_Controller {
 			}
 			//opciones tallas
 						public function matAltaUnidadesdeMedida(){
-							$this->load->view('matAltaUnidadesdeMedida');
+							$data = array(
+							'ultimaUMedida'=>$this->m_Lyons->getUumedidas(),
+							);
+							$this->load->view('matAltaUnidadesdeMedida',$data);
 						}
 
 //panel
