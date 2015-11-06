@@ -2,14 +2,14 @@
 <nav class="navbar navbar-fixed-top background" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header col-lg-2">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#opcionesMateriales"> <!-- Menu desplegable para opciones de materiaales -->
+        <button type="button" class="navbar-toggle btn" data-toggle="collapse" data-target="#opcionesMateriales"> <!-- Menu desplegable para opciones de materiaales -->
             <span class="sr-only">Toggle navigation</span>
             <span class="">Menu Materiales</span>
 <!--             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span> -->
         </button>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#opcionesMenu"> <!-- Menu desplegable para opciones de menu -->
+        <button type="button" class="navbar-toggle btn" data-toggle="collapse" data-target="#opcionesMenu"> <!-- Menu desplegable para opciones de menu -->
             <span class="sr-only">Toggle navigation</span>
             <span class="">Menu principal</span>
 <!-- <span class="icon-bar"></span>
@@ -20,7 +20,7 @@
         <a class="navbar-brand textTitle" href="index.php/welcome/panelMateriales">Materials</a>
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse" id="opcionesMenu">
-        <ul class="nav navbar-nav top-nav textnav ">
+        <ul class="nav navbar-nav textnav navt">
             <li><a href="">Archivo</a></li>
             <li><a href="charts.html">Registros</a></li>
             <li><a href="tables.html">Control</a></li>
