@@ -11,7 +11,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h1 class="page-header" id="IdTitulo">Alta de Unidad de Medida</h1>
+                    <h1 class="page-header" id="IdTitulo">Edita Unidad de Medida</h1>
                   </div>
                 </div>
 
@@ -19,27 +19,25 @@
                   <div class="col-lg-2"></div>
                   <div class="col-lg-8">
 
-                    <form class="form-horizontal" action="index.php/uploader/altaUmedida" method="POST" enctype="multipart/form-data">
-                      <?php form_open_multipart('uploader/altaUmedida'); ?>
+                    <form class="form-horizontal" action="index.php/uploader/actualizaUmedida" method="POST" enctype="multipart/form-data">
+                      <?php form_open_multipart('uploader/actualizaUmedida'); ?>
                         <div class="form-group">
+                          <input type="hidden" name="id" value="<?php echo $umedida['clave']?>">
                           <label for="clave" class="control-label col-lg-9">Clave</label>
                           <div class="col-lg-3">
-                           <?php foreach ($ultimaUMedida as $ultimo) { ?>
-                              <input type="text" name="clave" type="text" placeholder="<?php echo $ultimo['clave']+1 ?>" class="form-control" disabled>
-                           <?php } ?>
+                              <input type="text" name="clave" type="text" placeholder="<?php echo $umedida['clave']+1 ?>" class="form-control" disabled>
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="descripcion" class="control-label col-lg-2">Descripcion</label>
                           <div class="col-lg-6">
-                            <input name="descripcion" id=""  class="form-control" placehoder="">
+                            <input name="descripcion" id=""  class="form-control" placehoder="" value="<?php echo $umedida['descripcion']?>">
                           </div>
-
                         </div>
                         <div class="form-group">
                           <label for="factor" class="control-label col-lg-2">Factor</label>
                           <div class="col-lg-3">
-                            <input type="text" name="factor" type="text" class="form-control">
+                            <input type="text" name="factor" type="text" class="form-control" value="<?php echo $umedida['factor_tbmedida']?>">
                           </div>
                         </div>
                         <div class="form-group ">
