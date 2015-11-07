@@ -59,7 +59,7 @@
                               <td><?php echo $rowProductos['clavecor']; ?></td>
                               <td><?php echo $rowProductos['tentrega']; ?></td>
                               <td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
-                              <td><a href=""><i class="fa fa-trash-o"></i></a></td>
+                              <td><a href="index.php/uploader/desactivaProducto?id=<?php echo $rowProductos['clave'];?>"><i class="fa fa-trash-o"></i></a></td>
                           </tr>
                           <?php } ?>
                         </tbody>

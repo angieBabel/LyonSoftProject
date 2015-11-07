@@ -11,7 +11,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h1 id="IdTitulo">Alta de Almacen</h1>
+                    <h1 id="IdTitulo">Alta de Unidad de Medida</h1>
                   </div>
                 </div>
 

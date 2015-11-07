@@ -82,7 +82,7 @@
                           <td><?php echo $rowTallas['cor14']; ?></td>
                           <td><?php echo $rowTallas['cor15']; ?></td>
                           <td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
-                          <td><a href=""><i class="fa fa-trash-o"></i></a></td>
+                          <td><a href="index.php/uploader/desactivaTalla?id=<?php echo $rowTallas['clave'];?>"><i class="fa fa-trash-o"></i></a></td>
                       </tr>
                     <?php } ?>
                   </tbody>

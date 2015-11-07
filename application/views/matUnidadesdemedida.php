@@ -51,8 +51,8 @@
                                <td><?php echo $rowUnimedidas['descripcion']; ?></td>
                                <td><?php echo $rowUnimedidas['factor_tbmedida']; ?></td>
                                <td><?php echo $rowUnimedidas['unidadbase_id']; ?></td>
-                               <td><i class="fa fa-pencil-square-o"></i></td>
-                               <td><i class="fa fa-trash-o"></i></td>
+                               <td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
+                               <td><a href="index.php/uploader/desactivaUmedida?id=<?php echo $rowUnimedidas['clave'];?>"><i class="fa fa-trash-o"></i></a></td>
                            </tr>
                            <?php } ?>
                          </tbody>

@@ -46,8 +46,8 @@
                                <td><?php echo $rowAlmacen['clave']; ?></td>
                                <td><?php echo $rowAlmacen['descripcion']; ?></td>
                                <td><?php echo $rowAlmacen['fecha']; ?></td>
-                               <td><i class="fa fa-pencil-square-o"></i></td>
-                               <td><i class="fa fa-trash-o"></i></td>
+                               <td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
+                               <td><a href="index.php/uploader/desactivaAlmacen?id=<?php echo $rowAlmacen['clave'];?>"><i class="fa fa-trash-o"></i></a></td>
                            </tr>
                            <?php } ?>
                         </tbody>

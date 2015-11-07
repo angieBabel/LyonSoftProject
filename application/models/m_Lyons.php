@@ -130,7 +130,7 @@ class M_Lyons extends CI_Model{
 
   public function altaTalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
       $t7,$t8,$t9,$t10,$t11,$t12,$t13,$t14,$t15,$descripcion){
-    $this->db->set('clave',$clave)
+      $this->db->set('clave',$clave)
             ->set('corrida',$corrida)
             ->set('letra',$letra)
             ->set('cor1',$t1)
@@ -174,15 +174,24 @@ class M_Lyons extends CI_Model{
 
   }
 
-  public function desactivaAlmacen(){
+  public function desactivaAlmacen($id){
+    $this->db->set('estatus',0)
+             ->where('clave',$id)
+             ->update('tbalmacen');
 
   }
 
-  public function desactivaTallas(){
+  public function desactivaTalla($id){
+    $this->db->set('estatus',0)
+             ->where('clave',$id)
+             ->update('tallas');
 
   }
 
-  public function desactivaUmedida(){
+  public function desactivaUmedida($id){
+    $this->db->set('estatus',0)
+             ->where('clave',$id)
+             ->update('tbmedidas');
 
   }
 

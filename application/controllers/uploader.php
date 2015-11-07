@@ -105,14 +105,42 @@ function __construct(){
 
     $this->m_Lyons->altaUmedida($clave,$descripcion,$factor,$fecha);
     redirect('welcome/matUnidadesdeMedida');
-
-
   }
+
 //Desactivar
-  function desactivaProducto($id)
+  public function desactivaProducto($id)
   {
+    $id = $_GET['id'];
     $this->m_Lyons->desactivaProducto($id);
     redirect('welcome/matProductos');
+  }
+
+  public function desactivaProveedor($id)
+  {
+    $id = $_GET['id'];
+    $this->m_Lyons->desactivaProveedor($id);
+    redirect('welcome/matProveedores');
+  }
+
+  public function desactivaAlmacen($id)
+  {
+    $id = $_GET['id'];
+    $this->m_Lyons->desactivaAlmacen($id);
+    redirect('welcome/matAlmacenes');
+  }
+
+  public function desactivaTalla($id)
+  {
+    $id = $_GET['id'];
+    $this->m_Lyons->desactivaTalla($id);
+    redirect('welcome/matTallas');
+  }
+
+  public function desactivaUmedida($id)
+  {
+    $id = $_GET['id'];
+    $this->m_Lyons->desactivaUmedida($id);
+    redirect('welcome/matUnidadesdeMedida');
   }
 
 
