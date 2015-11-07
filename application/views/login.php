@@ -1,6 +1,6 @@
 <?php include_once("/sections/header.php") ?>
 
-  <body>
+  <body class="borde">
 
   <div class="wrapper">
 	<div class="container">
