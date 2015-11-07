@@ -11,19 +11,19 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h1 id="IdTitulo">Alta de Unidad de Medida</h1>
+                    <h1 class="page-header" id="IdTitulo">Alta de Unidad de Medida</h1>
                   </div>
                 </div>
 
                 <div class="row ">
                   <div class="col-lg-2"></div>
-                  <div class="col-lg-8 pform">
+                  <div class="col-lg-8">
 
                     <form class="form-horizontal" action="index.php/uploader/altaUmedida" method="POST" enctype="multipart/form-data">
                       <?php form_open_multipart('uploader/altaUmedida'); ?>
                         <div class="form-group">
-                          <label for="clave" class="control-label col-lg-2">Clave</label>
-                          <div class="col-lg-4">
+                          <label for="clave" class="control-label col-lg-9">Clave</label>
+                          <div class="col-lg-3">
                            <?php foreach ($ultimaUMedida as $ultimo) { ?>
                               <input type="text" name="clave" type="text" placeholder="<?php echo $ultimo['clave']+1 ?>" class="form-control" disabled>
                            <?php } ?>
@@ -32,11 +32,13 @@
                         <div class="form-group">
                           <label for="descripcion" class="control-label col-lg-2">Descrpipcion</label>
                           <div class="col-lg-6">
-                            <textarea name="descripcion" id="" rows="3  " class="form-control" placehoder="">
-                            </textarea>
+                            <input name="descripcion" id=""  class="form-control" placehoder="">
                           </div>
+
+                        </div>
+                        <div class="form-group">
                           <label for="factor" class="control-label col-lg-2">Factor</label>
-                          <div class="col-lg-2">
+                          <div class="col-lg-3">
                             <input type="text" name="factor" type="text" class="form-control">
                           </div>
                         </div>
