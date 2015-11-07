@@ -39,6 +39,12 @@ class M_Lyons extends CI_Model{
                 ->get()
                 ->result_array();
   }
+  public function get_Producto($id){
+    return $this->db->from('articulos')
+                ->where('clave',$id)
+                ->get()
+                ->result_array();
+  }
   /*
   public function getUProveedor()
    {
@@ -66,6 +72,12 @@ class M_Lyons extends CI_Model{
                 ->get()
                 ->result_array();
   }
+  public function get_Almacenn($id){
+    return $this->db->from('tbalmacen')
+                ->where('clave',$id)
+                ->get()
+                ->result_array();
+  }
 
   public function getUTalla()
    {
@@ -81,6 +93,12 @@ class M_Lyons extends CI_Model{
                 ->get()
                 ->result_array();
   }
+  public function get_Talla($id){
+    return $this->db->from('tallas')
+                ->where('clave',$id)
+                ->get()
+                ->result_array();
+  }
   public function getUumedidas()
    {
     $this->db->order_by('clave','desc');
@@ -92,6 +110,12 @@ class M_Lyons extends CI_Model{
   public function get_umedidas(){
     return $this->db->from('tbmedidas')
                 ->where('estatus',1)
+                ->get()
+                ->result_array();
+  }
+  public function get_Umedida($id){
+    return $this->db->from('tbmedidas')
+                ->where('clave',$id)
                 ->get()
                 ->result_array();
   }
@@ -194,5 +218,68 @@ class M_Lyons extends CI_Model{
              ->update('tbmedidas');
 
   }
+
+//Actualizar
+  public function actualizaProducto($clave,$descripcion,$ucosto,$umedidas,$fecha,
+    $tallas,$minimo,$maximo,$tentrega,$sku1,$sku2){
+    $this->db->set('descripcion',$descripcion)
+            ->set('costo',$ucosto)
+            ->set('idmedida',$umedidas)
+            ->set('clavecor',$tallas)
+            ->set('fecha',$fecha)
+            ->set('unicode',prueba)//unicode pendiente
+            ->set('minimo',$minimo)
+            ->set('maximo',$maximo)
+            ->set('sku1',$sku1)
+            ->set('sku2',$sku2)
+            ->set('usuario',prueba)//pendiente
+            ->set('tentrega',$tentrega)
+            ->set('estatus',1)
+            ->where('clave',$clave)
+            ->update('articulos');
+  }
+
+  public function actualizaAlmacen($clave,$descripcion,$fecha){
+    $this->db->set('descripcion',$descripcion)
+            ->set('fecha',$fecha)
+            ->set('estatus',1)
+            ->where('clave',$clave)
+            ->update('tbalmacen');
+  }
+
+  public function actualizaTalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
+      $t7,$t8,$t9,$t10,$t11,$t12,$t13,$t14,$t15,$descripcion){
+      $this->db->set('corrida',$corrida)
+            ->set('letra',$letra)
+            ->set('cor1',$t1)
+            ->set('cor2',$t2)
+            ->set('cor3',$t3)
+            ->set('cor4',$t4)
+            ->set('cor5',$t5)
+            ->set('cor6',$t6)
+            ->set('cor7',$t7)
+            ->set('cor8',$t8)
+            ->set('cor9',$t9)
+            ->set('cor10',$t10)
+            ->set('cor11',$t11)
+            ->set('cor12',$t12)
+            ->set('cor13',$t13)
+            ->set('cor14',$t14)
+            ->set('cor15',$t15)
+            ->set('descripcion',$descripcion)
+            ->set('estatus',1)
+            ->where('clave',$clave)
+            ->update('tallas');
+  }
+
+  public function actualizaUmedida($clave,$descripcion,$factor){
+    $this->db->set('descripcion',$descripcion)
+            ->set('factor_tbmedida',$factor)
+            ->set('estatus',1)
+            ->where('clave',$clave)
+            ->update('tbmedidas');
+  }
+
+
 
 }
