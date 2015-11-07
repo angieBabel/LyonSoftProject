@@ -1,22 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
+	function __construct(){
+		parent::__construct();
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+		$this->load->model('m_Lyons');
+
+	}
+
 	public function index()//pagina principal
 	{
 		$this->load->view('login');
@@ -31,11 +22,19 @@ class Welcome extends CI_Controller {
 	}
 
 			public function matProductos(){
-						$this->load->view('matProductos');
+						$data = array(
+								'productos'=>$this->m_Lyons->get_productos(),
+							);
+						$this->load->view('matProductos',$data);
 					}
 					//Opciones de productos
 							public function matAltaProductos(){
-								$this->load->view('matAltaProductos');
+								$data= array(
+										'ultimoProducto'=>$this->m_Lyons->getUProducto(),
+										'unimedidas'=>$this->m_Lyons->get_umedidas(),
+										'tallas'=>$this->m_Lyons->get_tallas(),
+									);
+								$this->load->view('matAltaProductos',$data);
 							}
 
 
@@ -48,28 +47,46 @@ class Welcome extends CI_Controller {
 							}
 
 			public function matAlmacenes(){
-				$this->load->view('matAlmacenes');
+				$data = array(
+					'almacen'=>$this->m_Lyons->get_almacen()
+					);
+				$this->load->view('matAlmacenes',$data);
 
 			}
 			//opciones almacenes
 						public function matAltaAlmacenes(){
-							$this->load->view('matAltaAlmacenes');
+							$data = array(
+							'ultimoAlmacen'=>$this->m_Lyons->getUAlmacen(),
+							);
+							$this->load->view('matAltaAlmacenes',$data);
 						}
 
 			public function matTallas(){
-				$this->load->view('matTallas');
+				$data = array(
+					'tallas'=>$this->m_Lyons->get_tallas()
+					);
+				$this->load->view('matTallas',$data);
 			}
 			//opciones tallas
 						public function matAltaTallas(){
-							$this->load->view('matAltaTallas');
+							$data=array (
+								'ultimaTalla'=>$this->m_Lyons->getUTalla(),
+							);
+							$this->load->view('matAltaTallas',$data);
 						}
 
 			public function matUnidadesdeMedida(){
-				$this->load->view('matUnidadesdeMedida');
+				$data = array(
+								'unimedida'=>$this->m_Lyons->get_umedidas(),
+							);
+				$this->load->view('matUnidadesdeMedida',$data);
 			}
 			//opciones tallas
 						public function matAltaUnidadesdeMedida(){
-							$this->load->view('matAltaUnidadesdeMedida');
+							$data = array(
+							'ultimaUMedida'=>$this->m_Lyons->getUumedidas(),
+							);
+							$this->load->view('matAltaUnidadesdeMedida',$data);
 						}
 
 //panel

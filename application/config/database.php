@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
+$db['default']['hostname'] = /*'localhost';*/'lyonsserver.dyndns.org';
+$db['default']['username'] = /*'';*/'avisoft';
+$db['default']['password'] = /*'';*/'123456';
+$db['default']['database'] = /*'';*/'produccion';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
