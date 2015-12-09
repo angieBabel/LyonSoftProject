@@ -1,13 +1,13 @@
-<?php include_once("/sections/header.php") ?>
+<?php include_once("sections/header.php") ?>
 
 <body>
 
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar  navbar-fixed-top textnav background" role="navigation">
+        <nav class="navbar  navbar-inverse navbar-fixed-top textnav background" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div class="navbar-header navbar-inverse">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -18,7 +18,7 @@
                 <a class="navbar-brand textTitle" href="index.php/welcome/panelPrincipal">Home</a>
             </div>
             <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
+            <ul class="nav navbar-right navbar-inverse top-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
                     <ul class="dropdown-menu message-dropdown">
@@ -186,4 +186,4 @@
 </body>
 
 </html>
-<?php  include_once ("/sections/footer.php") ?>
+<?php  include_once ("sections/footer.php") ?>

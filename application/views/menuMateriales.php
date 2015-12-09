@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-fixed-top background" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top background" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header col-lg-2">
         <button type="button" class="navbar-toggle btn" data-toggle="collapse" data-target="#opcionesMateriales"> <!-- Menu desplegable para opciones de materiaales -->

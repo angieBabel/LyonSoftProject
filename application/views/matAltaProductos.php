@@ -1,4 +1,4 @@
-<?php include_once("/sections/header.php") ?>
+<?php include_once("sections/header.php") ?>
 
 <body>
 
@@ -29,11 +29,10 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="clave" class="text-left control-label col-lg-2">Descrpipcion</label>
+                    <label for="clave" class="text-left control-label col-lg-2">Descripcion</label>
                     <div class="col-lg-10">
-                      <textarea name="descripcion" id="" rows="3  " class="form-control" placehoder="Descripción de la actividad">
+                      <textarea name="descripcion" id="" rows="3  " class="form-control" placehoder="Descripción de la actividad" value="<?php echo set_value('descripcion') ?>">
                       </textarea>
-
                     </div>
                   </div>
                   <div class="form-group">
@@ -110,4 +109,4 @@
     </div>
     <!-- /#wrapper -->
 </body>
-<?php  include_once ("/sections/footer.php") ?>
+<?php  include_once ("sections/footer.php") ?>
