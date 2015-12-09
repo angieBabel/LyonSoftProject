@@ -158,7 +158,8 @@ form button:hover {
 }
 .textnav{
   font-size: 15px;
-  color:#2C3E50;
+  /*color:#2C3E50;*/
+  color:white;
 }
 .navt>li>a {
     padding-top: 15px;
@@ -199,13 +200,16 @@ form button:hover {
 }
 .background{
   background: #2FDAB8;
+  background:#222;
   border-bottom: 5px solid #28F190;
   color:#152A38;
 }
 .backgroundL{
-  background: #ECF0F1;
+  /*background: #ECF0F1;*/
+  background:#222;
   border-top: 5px solid #28F190;
-  color:#2C3E50;
+  /*color:#2C3E50;*/
+  color:white
 
 }
 .borde{
