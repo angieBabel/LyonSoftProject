@@ -6,7 +6,7 @@ class uploader extends CI_Controller
 
 function __construct(){
     parent::__construct();
-
+    $this->load->library('form_validation');
     $this->load->model('m_lyons');
   }
 //inicio de sesion
@@ -37,23 +37,39 @@ function __construct(){
 }*/
 //Altas
   public function altaProducto(){
+    $this->form_validation->set_message('is_unique', 'El campo %s ya esta registrado');
+    $this->form_validation->set_message('required','El campo %s es requerido');
+    $this->form_validation->set_rules('descripcion', 'Descrpipcion', 'required|is_unique[articulos.descripcion]');
 
-      $clave=$this->input->POST('clave');
-      $descripcion=$this->input->POST('descripcion');
-      $ucosto=$this->input->POST('ucosto');
-      $umedidas=$this->input->POST('umedidas');
-      $tallas=$this->input->POST('tallas');
-      $fecha = date('Y-m-d');
-      $minimo=$this->input->POST('minimo');
-      $maximo=$this->input->POST('maximo');
-      $tentrega=$this->input->POST('tentrega');
-      $sku1=$this->input->POST('sku1');
-      $sku2=$this->input->POST('sku2');
+    //$this->form_validation->set_rules('correo','Correo','required|valid_email');
+      if ($this->form_validation->run() == FALSE)
+      {
+         //Acción a tomar si existe un error el en la validación
+        redirect('welcome/matAltaProductos');
+      }
+      else
+      {
+         //Acción a tomas si no existe ningun error
+            $clave=$this->input->POST('clave');
+            $descripcion=$this->input->POST('descripcion');
+            $ucosto=$this->input->POST('ucosto');
+            $umedidas=$this->input->POST('umedidas');
+            $tallas=$this->input->POST('tallas');
+            $fecha = date('Y-m-d');
+            $minimo=$this->input->POST('minimo');
+            $maximo=$this->input->POST('maximo');
+            $tentrega=$this->input->POST('tentrega');
+            $sku1=$this->input->POST('sku1');
+            $sku2=$this->input->POST('sku2');
 
-      $this->m_lyons->altaproducto($clave,$descripcion,
-      $ucosto,$umedidas,$fecha,$tallas,$minimo,$maximo,$tentrega,$sku1,$sku2);
-     redirect('welcome/matProductos');
+            $this->m_lyons->altaproducto($clave,$descripcion,
+            $ucosto,$umedidas,$fecha,$tallas,$minimo,$maximo,$tentrega,$sku1,$sku2);
+            redirect('welcome/matProductos');
+      }
+
+
     }
+
 
    public function altaProveedor(){
 

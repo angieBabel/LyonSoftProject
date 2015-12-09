@@ -49,16 +49,16 @@
                         <tbody>
                           <?php foreach($productos as $rowProductos){ ?>
                           <tr>
-                              <td><?php echo $rowProductos['clave']; ?></td>
-                              <td><?php echo $rowProductos['descripcion']; ?></td>
-                              <td><?php echo $rowProductos['idmedida']; ?></td>
-                              <td><?php echo $rowProductos['costo']; ?></td>
-                              <td><?php echo $rowProductos['maximo']; ?></td>
-                              <td><?php echo $rowProductos['minimo']; ?></td>
-                              <td><?php echo $rowProductos['clavecor']; ?></td>
-                              <td><?php echo $rowProductos['tentrega']; ?></td>
-                              <td><a href="index.php/uploader/editaProducto?id=<?php echo $rowProductos['clave'];?>"><i class="fa fa-pencil-square-o"></i></a></td>
-                              <td><a href="index.php/uploader/desactivaProducto?id=<?php echo $rowProductos['clave'];?>"><i class="fa fa-times-circle"></i></a></td>
+                              <td><?php echo $rowProductos['arclave']; ?></td>
+                              <td><?php echo $rowProductos['ardescripcion']; ?></td>
+                              <td><?php echo $rowProductos['medescripcion']; ?></td>
+                              <td><?php echo $rowProductos['arcosto']; ?></td>
+                              <td><?php echo $rowProductos['armaximo']; ?></td>
+                              <td><?php echo $rowProductos['arminimo']; ?></td>
+                              <td><?php echo $rowProductos['arclavecor']; ?></td>
+                              <td><?php echo $rowProductos['artentrega']; ?></td>
+                              <td><a href="index.php/uploader/editaProducto?id=<?php echo $rowProductos['arclave'];?>"><i class="fa fa-pencil-square-o"></i></a></td>
+                              <td><a href="index.php/uploader/desactivaProducto?id=<?php echo $rowProductos['arclave'];?>"><i class="fa fa-times-circle"></i></a></td>
                           </tr>
                           <?php } ?>
                         </tbody>

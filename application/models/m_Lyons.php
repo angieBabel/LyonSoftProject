@@ -34,11 +34,16 @@ class m_lyons extends CI_Model{
    }
 
   public function get_productos(){
-     return $this->db->from('articulos')
-                ->where('estatus',1)
+     return $this->db->select('articulos.clave as arclave, articulos.descripcion as ardescripcion,
+      tbmedidas.descripcion as medescripcion,articulos.costo as arcosto,articulos.maximo as armaximo,
+      articulos.minimo as arminimo,articulos.clavecor as arclavecor,articulos.tentrega as artentrega')
+                ->from('articulos')
+                ->join('tbmedidas','articulos.idmedida=tbmedidas.clave','left')
+                ->where('articulos.estatus',1)
                 ->get()
                 ->result_array();
   }
+
   public function get_producto($id){
     return $this->db->from('articulos')
                 ->where('clave',$id)
