@@ -1,4 +1,4 @@
-<?php include_once("/sections/header.php") ?>
+<?php include_once("sections/header.php") ?>
 
 <body>
 
@@ -90,4 +90,4 @@
     <!-- /#wrapper -->
 
 </body>
-<?php  include_once ("/sections/footer.php") ?>
+<?php  include_once ("sections/footer.php") ?>

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class M_Lyons extends CI_Model{
+class m_lyons extends CI_Model{
   function __construct(){
     parent::__construct();
   }
@@ -25,7 +25,7 @@ class M_Lyons extends CI_Model{
   }*/
 
 //obtención de datos de la base de datos
-  public function getUProducto()
+  public function getuproducto()
    {
     $this->db->order_by('clave','desc');
     $this->db->limit(1);
@@ -39,7 +39,7 @@ class M_Lyons extends CI_Model{
                 ->get()
                 ->result_array();
   }
-  public function get_Producto($id){
+  public function get_producto($id){
     return $this->db->from('articulos')
                 ->where('clave',$id)
                 ->get()
@@ -58,7 +58,7 @@ class M_Lyons extends CI_Model{
                   ->get()
                   ->result_array();
     }*/
-  public function getUAlmacen()
+  public function getualmacen()
    {
     $this->db->order_by('clave','desc');
     $this->db->limit(1);
@@ -72,14 +72,14 @@ class M_Lyons extends CI_Model{
                 ->get()
                 ->result_array();
   }
-  public function get_Almacenn($id){
+  public function get_almacenn($id){
     return $this->db->from('tbalmacen')
                 ->where('clave',$id)
                 ->get()
                 ->result_array();
   }
 
-  public function getUTalla()
+  public function getutalla()
    {
     $this->db->order_by('clave','desc');
     $this->db->limit(1);
@@ -93,13 +93,13 @@ class M_Lyons extends CI_Model{
                 ->get()
                 ->result_array();
   }
-  public function get_Talla($id){
+  public function get_talla($id){
     return $this->db->from('tallas')
                 ->where('clave',$id)
                 ->get()
                 ->result_array();
   }
-  public function getUumedidas()
+  public function getuumedidas()
    {
     $this->db->order_by('clave','desc');
     $this->db->limit(1);
@@ -113,7 +113,7 @@ class M_Lyons extends CI_Model{
                 ->get()
                 ->result_array();
   }
-  public function get_Umedida($id){
+  public function get_umedida($id){
     return $this->db->from('tbmedidas')
                 ->where('clave',$id)
                 ->get()
@@ -121,39 +121,43 @@ class M_Lyons extends CI_Model{
   }
 
 //Altas
-  public function altaProducto($clave,$descripcion,$ucosto,$umedidas,$fecha,
+  public function altaproducto($clave,$descripcion,$ucosto,$umedidas,$fecha,
     $tallas,$minimo,$maximo,$tentrega,$sku1,$sku2){
+    $prueba='prueba';
+    $estatus='1';
     $this->db->set('clave',$clave)
             ->set('descripcion',$descripcion)
             ->set('costo',$ucosto)
             ->set('idmedida',$umedidas)
             ->set('clavecor',$tallas)
             ->set('fecha',$fecha)
-            ->set('unicode',prueba)//unicode pendiente
+            ->set('unicode',$prueba)//unicode pendiente
             ->set('minimo',$minimo)
             ->set('maximo',$maximo)
             ->set('sku1',$sku1)
             ->set('sku2',$sku2)
-            ->set('usuario',prueba)//pendiente
+            ->set('usuario',$prueba)//pendiente
             ->set('tentrega',$tentrega)
-            ->set('estatus',1)
+            ->set('estatus',$estatus)
             ->insert('articulos');
   }
 
-  public function altaProveedor(){
+  public function altaproveedor(){
 
   }
 
-  public function altaAlmacen($clave,$descripcion,$fecha){
+  public function altaalmacen($clave,$descripcion,$fecha){
+    $estatus='1';
     $this->db->set('clave',$clave)
             ->set('descripcion',$descripcion)
             ->set('fecha',$fecha)
-            ->set('estatus',1)
+            ->set('estatus',$estatus)
             ->insert('tbalmacen');
   }
 
-  public function altaTalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
+  public function altatalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
       $t7,$t8,$t9,$t10,$t11,$t12,$t13,$t14,$t15,$descripcion){
+    $estatus='1';
       $this->db->set('clave',$clave)
             ->set('corrida',$corrida)
             ->set('letra',$letra)
@@ -173,46 +177,47 @@ class M_Lyons extends CI_Model{
             ->set('cor14',$t14)
             ->set('cor15',$t15)
             ->set('descripcion',$descripcion)
-            ->set('estatus',1)
+            ->set('estatus',$estatus)
             ->insert('tallas');
 
   }
 
   public function altaUmedida($clave,$descripcion,$factor){
+    $estatus='1';
     $this->db->set('clave',$clave)
             ->set('descripcion',$descripcion)
             ->set('factor_tbmedida',$factor)
-            ->set('estatus',1)
+            ->set('estatus',$estatus)
             ->insert('tbmedidas');
   }
 
 
 //Desactivar campos
-  public function desactivaProducto($id){
+  public function desactivaproducto($id){
     $this->db->set('estatus',0)
              ->where('clave',$id)
              ->update('articulos');
   }
 
-  public function desactivaProveedor(){
+  public function desactivaproveedor(){
 
   }
 
-  public function desactivaAlmacen($id){
+  public function desactivaalmacen($id){
     $this->db->set('estatus',0)
              ->where('clave',$id)
              ->update('tbalmacen');
 
   }
 
-  public function desactivaTalla($id){
+  public function desactivatalla($id){
     $this->db->set('estatus',0)
              ->where('clave',$id)
              ->update('tallas');
 
   }
 
-  public function desactivaUmedida($id){
+  public function desactivaumedida($id){
     $this->db->set('estatus',0)
              ->where('clave',$id)
              ->update('tbmedidas');
@@ -220,35 +225,39 @@ class M_Lyons extends CI_Model{
   }
 
 //Actualizar
-  public function actualizaProducto($clave,$descripcion,$ucosto,$umedidas,$fecha,
+  public function actualizaproducto($clave,$descripcion,$ucosto,$umedidas,$fecha,
     $tallas,$minimo,$maximo,$tentrega,$sku1,$sku2){
-    $this->db->set('descripcion',$descripcion)
+     $prueba="prueba";
+    $estatus='1';
+    $this->db>set('descripcion',$descripcion)
             ->set('costo',$ucosto)
             ->set('idmedida',$umedidas)
             ->set('clavecor',$tallas)
             ->set('fecha',$fecha)
-            ->set('unicode',prueba)//unicode pendiente
+            ->set('unicode',$prueba)//unicode pendiente
             ->set('minimo',$minimo)
             ->set('maximo',$maximo)
             ->set('sku1',$sku1)
             ->set('sku2',$sku2)
-            ->set('usuario',prueba)//pendiente
+            ->set('usuario',$prueba)//pendiente
             ->set('tentrega',$tentrega)
-            ->set('estatus',1)
+            ->set('estatus',$estatus)
             ->where('clave',$clave)
             ->update('articulos');
   }
 
-  public function actualizaAlmacen($clave,$descripcion,$fecha){
+  public function actualizaalmacen($clave,$descripcion,$fecha){
+    $estatus='1';
     $this->db->set('descripcion',$descripcion)
             ->set('fecha',$fecha)
-            ->set('estatus',1)
+            ->set('estatus',$estatus)
             ->where('clave',$clave)
             ->update('tbalmacen');
   }
 
-  public function actualizaTalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
+  public function actualizatalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
       $t7,$t8,$t9,$t10,$t11,$t12,$t13,$t14,$t15,$descripcion){
+    $estatus='1';
       $this->db->set('corrida',$corrida)
             ->set('letra',$letra)
             ->set('cor1',$t1)
@@ -267,15 +276,16 @@ class M_Lyons extends CI_Model{
             ->set('cor14',$t14)
             ->set('cor15',$t15)
             ->set('descripcion',$descripcion)
-            ->set('estatus',1)
+            ->set('estatus',$estatus)
             ->where('clave',$clave)
             ->update('tallas');
   }
 
-  public function actualizaUmedida($clave,$descripcion,$factor){
+  public function actualizaumedida($clave,$descripcion,$factor){
+    $estatus='1';
     $this->db->set('descripcion',$descripcion)
             ->set('factor_tbmedida',$factor)
-            ->set('estatus',1)
+            ->set('estatus',$estatus)
             ->where('clave',$clave)
             ->update('tbmedidas');
   }

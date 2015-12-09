@@ -4,7 +4,7 @@ class Welcome extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 
-		$this->load->model('m_Lyons');
+		$this->load->model('m_lyons');
 
 	}
 
@@ -23,16 +23,16 @@ class Welcome extends CI_Controller {
 
 			public function matProductos(){
 						$data = array(
-								'productos'=>$this->m_Lyons->get_productos(),
+								'productos'=>$this->m_lyons->get_productos(),
 							);
 						$this->load->view('matProductos',$data);
 					}
 					//Opciones de productos
 							public function matAltaProductos(){
 								$data= array(
-										'ultimoProducto'=>$this->m_Lyons->getUProducto(),
-										'unimedidas'=>$this->m_Lyons->get_umedidas(),
-										'tallas'=>$this->m_Lyons->get_tallas(),
+										'ultimoProducto'=>$this->m_lyons->getuproducto(),
+										'unimedidas'=>$this->m_lyons->get_umedidas(),
+										'tallas'=>$this->m_lyons->get_tallas(),
 									);
 								$this->load->view('matAltaProductos',$data);
 							}
@@ -48,7 +48,7 @@ class Welcome extends CI_Controller {
 
 			public function matAlmacenes(){
 				$data = array(
-					'almacen'=>$this->m_Lyons->get_almacen()
+					'almacen'=>$this->m_lyons->get_almacen()
 					);
 				$this->load->view('matAlmacenes',$data);
 
@@ -56,35 +56,35 @@ class Welcome extends CI_Controller {
 			//opciones almacenes
 						public function matAltaAlmacenes(){
 							$data = array(
-							'ultimoAlmacen'=>$this->m_Lyons->getUAlmacen(),
+							'ultimoAlmacen'=>$this->m_lyons->getualmacen(),
 							);
 							$this->load->view('matAltaAlmacenes',$data);
 						}
 
 			public function matTallas(){
 				$data = array(
-					'tallas'=>$this->m_Lyons->get_tallas()
+					'tallas'=>$this->m_lyons->get_tallas()
 					);
 				$this->load->view('matTallas',$data);
 			}
 			//opciones tallas
 						public function matAltaTallas(){
 							$data=array (
-								'ultimaTalla'=>$this->m_Lyons->getUTalla(),
+								'ultimaTalla'=>$this->m_lyons->getutalla(),
 							);
 							$this->load->view('matAltaTallas',$data);
 						}
 
 			public function matUnidadesdeMedida(){
 				$data = array(
-								'unimedida'=>$this->m_Lyons->get_umedidas(),
+								'unimedida'=>$this->m_lyons->get_umedidas(),
 							);
 				$this->load->view('matUnidadesdeMedida',$data);
 			}
 			//opciones tallas
 						public function matAltaUnidadesdeMedida(){
 							$data = array(
-							'ultimaUMedida'=>$this->m_Lyons->getUumedidas(),
+							'ultimaUMedida'=>$this->m_lyons->getuumedidas(),
 							);
 							$this->load->view('matAltaUnidadesdeMedida',$data);
 						}

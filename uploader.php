@@ -7,7 +7,7 @@ class uploader extends CI_Controller
 function __construct(){
     parent::__construct();
 
-    $this->load->model('m_lyons');
+    $this->load->model('m_Lyons');
   }
 //inicio de sesion
  /* public function sesion(){
@@ -50,7 +50,7 @@ function __construct(){
       $sku1=$this->input->POST('sku1');
       $sku2=$this->input->POST('sku2');
 
-      $this->m_lyons->altaproducto($clave,$descripcion,
+      $this->m_Lyons->altaProducto($clave,$descripcion,
       $ucosto,$umedidas,$fecha,$tallas,$minimo,$maximo,$tentrega,$sku1,$sku2);
      redirect('welcome/matProductos');
     }
@@ -64,7 +64,7 @@ function __construct(){
     $descripcion=$this->input->POST('descripcion');
     $fecha = date('Y-m-d');
 
-    $this->m_lyons->altaalmacen($clave,$descripcion,$fecha);
+    $this->m_Lyons->altaAlmacen($clave,$descripcion,$fecha);
     redirect('welcome/matAlmacenes');
   }
 
@@ -89,7 +89,7 @@ function __construct(){
     $t14=$this->input->POST('t-14');
     $t15=$this->input->POST('t-15');
 
-    $this->m_lyons->altatalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
+    $this->m_Lyons->altaTalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
       $t7,$t8,$t9,$t10,$t11,$t12,$t13,$t14,$t15,$descripcion);
     redirect('welcome/matTallas');
 
@@ -101,7 +101,7 @@ function __construct(){
     $factor=$this->input->POST('factor');
     $fecha = date('Y-m-d');
 
-    $this->m_lyons->altaumedida($clave,$descripcion,$factor,$fecha);
+    $this->m_Lyons->altaUmedida($clave,$descripcion,$factor,$fecha);
     redirect('welcome/matUnidadesdeMedida');
   }
 
@@ -109,45 +109,45 @@ function __construct(){
   public function desactivaProducto($id)
   {
     $id = $_GET['id'];
-    $this->m_lyons->desactivaproducto($id);
+    $this->m_Lyons->desactivaProducto($id);
     redirect('welcome/matProductos');
   }
 
   public function desactivaProveedor($id)
   {
     $id = $_GET['id'];
-    $this->m_lyons->desactivaproveedor($id);
+    $this->m_Lyons->desactivaProveedor($id);
     redirect('welcome/matProveedores');
   }
 
   public function desactivaAlmacen($id)
   {
     $id = $_GET['id'];
-    $this->m_lyons->desactivaalmacen($id);
+    $this->m_Lyons->desactivaAlmacen($id);
     redirect('welcome/matAlmacenes');
   }
 
   public function desactivaTalla($id)
   {
     $id = $_GET['id'];
-    $this->m_lyons->desactivatalla($id);
+    $this->m_Lyons->desactivaTalla($id);
     redirect('welcome/matTallas');
   }
 
   public function desactivaUmedida($id)
   {
     $id = $_GET['id'];
-    $this->m_lyons->desactivaumedida($id);
+    $this->m_Lyons->desactivaUmedida($id);
     redirect('welcome/matUnidadesdeMedida');
   }
 
 //Editar
   public function editaProducto(){
     $id = $_GET['id'];
-    $datos_producto=$this->m_lyons->get_producto($id);
+    $datos_producto=$this->m_Lyons->get_Producto($id);
     $datos['producto']=$datos_producto[0];
-    $datos['unimedidas']=$this->m_lyons->get_umedidas();
-    $datos['tallas']=$this->m_lyons->get_tallas();
+    $datos['unimedidas']=$this->m_Lyons->get_umedidas();
+    $datos['tallas']=$this->m_Lyons->get_tallas();
     $this->load->view('matEditaProducto',$datos);
   }
 
@@ -164,7 +164,7 @@ function __construct(){
       $sku1=$this->input->POST('sku1');
       $sku2=$this->input->POST('sku2');
 
-      $this->m_lyons->actualizaproducto($clave,$descripcion,
+      $this->m_Lyons->actualizaProducto($clave,$descripcion,
       $ucosto,$umedidas,$fecha,$tallas,$minimo,$maximo,$tentrega,$sku1,$sku2);
      redirect('welcome/matProductos');
   }
@@ -172,14 +172,14 @@ function __construct(){
 
   public function editaProveedor(){
     $id = $_GET['id'];
-    $datos_evento=$this->m_lyons->get_proveedor($id);
+    $datos_evento=$this->m_Lyons->get_Proveedor($id);
     $datos['proveedor']=$datos_evento[0];
     $this->load->view('matEditaProveedor',$datos);
   }
 
   public function editaAlmacen(){
     $id = $_GET['id'];
-    $datos_almacen=$this->m_lyons->get_almacenn($id);
+    $datos_almacen=$this->m_Lyons->get_Almacenn($id);
     $datos['almacen']=$datos_almacen[0];
 
     $this->load->view('matEditaAlmacen',$datos);
@@ -189,13 +189,13 @@ function __construct(){
     $clave=$this->input->POST('id');
     $descripcion=$this->input->POST('descripcion');
     $fecha = date('Y-m-d');
-    $this->m_lyons->actualizaalmacen($clave,$descripcion,$fecha);
+    $this->m_Lyons->actualizaAlmacen($clave,$descripcion,$fecha);
     redirect('welcome/matAlmacenes');
   }
 
   public function editaTalla(){
     $id = $_GET['id'];
-    $datos_talla=$this->m_lyons->get_talla($id);
+    $datos_talla=$this->m_Lyons->get_Talla($id);
     $datos['talla']=$datos_talla[0];
 
     $this->load->view('matEditaTalla',$datos);
@@ -221,7 +221,7 @@ function __construct(){
     $t14=$this->input->POST('t-14');
     $t15=$this->input->POST('t-15');
 
-    $this->m_lyons->actualizatalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
+    $this->m_Lyons->actualizaTalla($clave,$corrida,$letra,$t1,$t2,$t3,$t4,$t5,$t6,
       $t7,$t8,$t9,$t10,$t11,$t12,$t13,$t14,$t15,$descripcion);
     redirect('welcome/matTallas');
 
@@ -229,7 +229,7 @@ function __construct(){
 
   public function editaUmedida(){
     $id = $_GET['id'];
-    $datos_umedida=$this->m_lyons->get_umedida($id);
+    $datos_umedida=$this->m_Lyons->get_Umedida($id);
     $datos['umedida']=$datos_umedida[0];
 
     $this->load->view('matEditaUmedida',$datos);
@@ -240,7 +240,7 @@ function __construct(){
     $factor=$this->input->POST('factor');
     $fecha = date('Y-m-d');
 
-    $this->m_lyons->actualizaumedida($clave,$descripcion,$factor,$fecha);
+    $this->m_Lyons->actualizaUmedida($clave,$descripcion,$factor,$fecha);
     redirect('welcome/matUnidadesdeMedida');
   }
 

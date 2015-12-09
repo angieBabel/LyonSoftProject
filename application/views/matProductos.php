@@ -1,4 +1,4 @@
-<?php include_once("/sections/header.php") ?>
+<?php include_once("sections/header.php") ?>
 
 <body>
 
@@ -14,7 +14,6 @@
                     <div class="col-lg-12">
                         <h1 class="page-header" id="IdTitulo">Products</h1>
                     </div>
-
                 </div>
                 <div class="row">
                   <div class="col-lg-2 col-md-2 col-sm-1"></div>
@@ -100,4 +99,4 @@
     <!-- /#wrapper -->
 
 </body>
-<?php  include_once ("/sections/footer.php") ?>
+<?php  include_once ("sections/footer.php") ?>
